@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">iTech</string>
+    <string name="app_logo">@drawable/logo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">235130800308270</string>
+    <string name="google_plus_client">693646077295-u4v5a12904pirtcj1afr1uum3lnebjeb.apps.googleusercontent.com</string>
+
+    <string name="localhost">http://192.168.56.1/Itech/</string>
+    <string name="localhost_api">http://192.168.56.1/Itech/api</string>
+
+    <string name="item_login">Đăng nhập</string>
+    <string name="item_notify">Thông báo</string>
+    <string name="item_like">Danh sách yêu thích</string>
+    <string name="item_order">Đơn hàng</string>
+    <string name="item_setting">Cài đặt</string>
+    <string name="item_logout">Đăng xuất</string>
+
+    <string name="fragment_khuyenmai">Khuyến Mãi</string>
+    <string name="fragment_thoitrang">Thời Trang</string>
+    <string name="fragment_dientu">Điện Tử</string>
+    <string name="fragment_nhacua_doi_song">Nhà Cửa &amp; Đời Sống</string>
+    <string name="fragment_mebe">Mẹ &amp; Bé</string>
+    <string name="fragment_lamdep">Làm Đẹp</string>
+    <string name="fragment_thethao_dulich">Thể Thao &amp; Du Lich</string>
+    <string name="fragment_dangky">Đăng Ký</string>
+    <string name="fragment_dangnhap">Đăng Nhập</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+</resources>

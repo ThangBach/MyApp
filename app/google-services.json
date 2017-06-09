@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "693646077295",
+    "project_id": "firebase-itech"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693646077295:android:8802301005b5121f",
+        "android_client_info": {
+          "package_name": "com.example.bqt.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693646077295-u4v5a12904pirtcj1afr1uum3lnebjeb.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "693646077295-e9d37rp5bv848b6l5l6bb2otf5cgct6v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bqt.myapp",
+            "certificate_hash": "4583f3dd209f60474cfb017686e686f2bfa45925"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxHLyZx2LoAbeDSuvwFFTtlPzyQqFvzJQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/itSearch"
+        android:title="Search"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:showAsAction="always"
+        android:visible="false"
+        />
+
+    <item
+        android:id="@+id/itGioHang"
+        android:title="Giỏ hàng"
+        android:icon="@drawable/basket"
+        app:showAsAction="always"
+        app:actionLayout="@layout/custom_item_basket"
+        />
+
+    <!--<item-->
+        <!--android:icon="@drawable/ic_more_vert_white_24dp"-->
+        <!--android:title="more"-->
+        <!--app:showAsAction="always"-->
+        <!--&gt;-->
+
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/itDangNhap"-->
+                <!--android:title="Đăng nhập"-->
+                <!--android:icon="@drawable/user"-->
+                <!--/>-->
+
+            <!--<item-->
+                <!--android:id="@+id/itThongBao"-->
+                <!--android:title="Thông báo"-->
+                <!--android:icon="@drawable/notifi"-->
+                <!--/>-->
+
+            <!--<item-->
+                <!--android:id="@+id/itMongMuon"-->
+                <!--android:title="Danh sách mong muốn"-->
+                <!--android:icon="@drawable/like"-->
+                <!--/>-->
+
+
+
+            <!--<item-->
+                <!--android:id="@+id/itDonHangCuaToi"-->
+                <!--android:title="Đơn hàng của tôi"-->
+                <!--android:icon="@drawable/box"-->
+                <!--/>-->
+
+            <!--<item-->
+                <!--android:id="@+id/itCaiDat"-->
+                <!--android:title="Cài đặt"-->
+                <!--android:icon="@drawable/setting"-->
+                <!--/>-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>
