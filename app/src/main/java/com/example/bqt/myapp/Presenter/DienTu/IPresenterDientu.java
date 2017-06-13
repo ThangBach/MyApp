@@ -12,4 +12,5 @@ import java.util.List;
 public interface IPresenterDientu {
     List<Brand> getBrands();
     List<Product> getProducts();
+    void ShowData();
 }

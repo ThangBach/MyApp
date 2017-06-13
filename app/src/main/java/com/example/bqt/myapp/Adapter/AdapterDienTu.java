@@ -2,14 +2,18 @@ package com.example.bqt.myapp.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.bqt.myapp.Model.ObjectClass.DienTu;
 import com.example.bqt.myapp.R;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -31,6 +35,7 @@ public class AdapterDienTu extends RecyclerView.Adapter<AdapterDienTu.ViewHolder
 
         ImageView imageKhuyenMai;
         RecyclerView recyclerViewBrands, recyclerViewProducts;
+        TextView txt_danhmuc,txt_sanpham;
 
         public ViewHolderDienTu(View itemView) {
             super(itemView);
@@ -38,6 +43,8 @@ public class AdapterDienTu extends RecyclerView.Adapter<AdapterDienTu.ViewHolder
             recyclerViewBrands = (RecyclerView) itemView.findViewById(R.id.recyclerThuongHieuLon);
             recyclerViewProducts = (RecyclerView) itemView.findViewById(R.id.recyclerTopDienThoaiMayTinhBang);
             imageKhuyenMai = (ImageView) itemView.findViewById(R.id.imKhuyenMaiDienTu);
+            txt_danhmuc= (TextView) itemView.findViewById(R.id.txt_danhmuc);
+            txt_sanpham= (TextView) itemView.findViewById(R.id.txt_sanpham);
         }
     }
 
@@ -52,16 +59,36 @@ public class AdapterDienTu extends RecyclerView.Adapter<AdapterDienTu.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(AdapterDienTu.ViewHolderDienTu holder, int position) {
+    public void onBindViewHolder(final AdapterDienTu.ViewHolderDienTu holder, int position) {
         DienTu dienTu=dienTus.get(position);
 
-        AdapterThuongHieu adapterThuongHieu=new AdapterThuongHieu(myContext,dienTu.getBrands());
+        holder.txt_danhmuc.setText(dienTu.getTenDanhmuc());
+        holder.txt_sanpham.setText(dienTu.getTenSanpham());
+        Picasso.with(myContext).load(dienTu.getUrlImg()).into(holder.imageKhuyenMai, new Callback() {
+            @Override
+            public void onSuccess() {
+            }
 
-        RecyclerView.LayoutManager layoutManager=new GridLayoutManager(myContext,3,GridLayoutManager.HORIZONTAL,true);
+            @Override
+            public void onError() {
+
+            }
+        });
+
+        AdapterThuongHieu adapterThuongHieu=new AdapterThuongHieu(myContext,dienTu.getBrands());
+        RecyclerView.LayoutManager layoutManager=new GridLayoutManager(myContext,1,GridLayoutManager.HORIZONTAL,true);
 
         holder.recyclerViewBrands.setLayoutManager(layoutManager);
         holder.recyclerViewBrands.setAdapter(adapterThuongHieu);
         adapterThuongHieu.notifyDataSetChanged();
+
+        AdapterTopDienThoai adapterTopDienThoaiDienTu = new AdapterTopDienThoai(myContext,dienTu.getProducts());
+        RecyclerView.LayoutManager layoutManagerTop = new LinearLayoutManager(myContext,LinearLayoutManager.HORIZONTAL,false);
+
+        holder.recyclerViewProducts.setLayoutManager(layoutManagerTop);
+        holder.recyclerViewProducts.setAdapter(adapterTopDienThoaiDienTu);
+        adapterTopDienThoaiDienTu.notifyDataSetChanged();
+
     }
 
     @Override

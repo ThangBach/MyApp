@@ -118,7 +118,7 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
             viewGroupCha.setBackgroundResource(R.color.it_colorgray);
 
         }else{
-            viewHolderMenu.menuImage.setImageResource(R.drawable.more_icon);
+            viewHolderMenu.menuImage.setImageResource(R.drawable.show);
             viewGroupCha.setBackgroundResource(R.color.it_White);
         }
 

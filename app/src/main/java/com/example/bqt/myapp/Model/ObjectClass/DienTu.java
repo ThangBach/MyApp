@@ -9,6 +9,8 @@ import java.util.List;
 public class DienTu {
     List<Brand> brands;
     List<Product> products;
+    String tenDanhmuc;
+    String tenSanpham;
     String urlImg;
 
     public List<Brand> getBrands() {
@@ -33,5 +35,21 @@ public class DienTu {
 
     public void setUrlImg(String urlImg) {
         this.urlImg = urlImg;
+    }
+
+    public String getTenDanhmuc() {
+        return tenDanhmuc;
+    }
+
+    public void setTenDanhmuc(String tenDanhmuc) {
+        this.tenDanhmuc = tenDanhmuc;
+    }
+
+    public String getTenSanpham() {
+        return tenSanpham;
+    }
+
+    public void setTenSanpham(String tenSanpham) {
+        this.tenSanpham = tenSanpham;
     }
 }

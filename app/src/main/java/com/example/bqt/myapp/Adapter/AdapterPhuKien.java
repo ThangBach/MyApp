@@ -6,12 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.bqt.myapp.Model.Constaint;
 import com.example.bqt.myapp.Model.ObjectClass.Brand;
+import com.example.bqt.myapp.Model.ObjectClass.ProductCategory;
 import com.example.bqt.myapp.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
@@ -19,38 +19,36 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 /**
- * Created by BQT on 6/7/2017.
+ * Created by BQT on 6/10/2017.
  */
 
-public class AdapterThuongHieu extends RecyclerView.Adapter<AdapterThuongHieu.ViewHolder> {
+public class AdapterPhuKien extends RecyclerView.Adapter<AdapterPhuKien.ViewHolder>{
 
     Context myContext;
-    List<Brand> brands;
+    List<ProductCategory> productCategories;
 
-    public AdapterThuongHieu(Context myContext, List<Brand> brands) {
+    public AdapterPhuKien(Context myContext, List<ProductCategory> productCategories) {
         this.myContext = myContext;
-        this.brands = brands;
+        this.productCategories = productCategories;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AdapterPhuKien.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.custom_layout_recycle_thuonghieu, parent, false);
+        View view = layoutInflater.inflate(R.layout.custom_layout_recycle_phukien, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        Brand brand = brands.get(position);
-        holder.txt_Tieude_Thuonghieu.setText(brand.getName());
-        String url=Constaint.URL_IMG_MOBILE+"UploadFiles/userfiles/images/brands/" + brand.getImage();
-        Picasso.with(myContext).load(url).into(holder.img_Thuonghieu, new Callback() {
+    public void onBindViewHolder(final AdapterPhuKien.ViewHolder holder, int position) {
+        ProductCategory category = productCategories.get(position);
+        holder.txt_phukien.setText(category.getName());
+        Picasso.with(myContext).load(Constaint.URL_IMG_MOBILE+"UploadFiles/userfiles/images/productcategories/" + category.getImage()).resize(120, 120).into(holder.img_phukien, new Callback() {
             @Override
             public void onSuccess() {
                 holder.progressBar.setVisibility(View.GONE);
-
             }
 
             @Override
@@ -62,18 +60,18 @@ public class AdapterThuongHieu extends RecyclerView.Adapter<AdapterThuongHieu.Vi
 
     @Override
     public int getItemCount() {
-        return brands.size();
+        return 0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txt_Tieude_Thuonghieu;
-        ImageView img_Thuonghieu;
+        TextView txt_phukien;
+        ImageView img_phukien;
         ProgressBar progressBar;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txt_Tieude_Thuonghieu = (TextView) itemView.findViewById(R.id.txt_tieude);
-            img_Thuonghieu = (ImageView) itemView.findViewById(R.id.img_thuonghieu);
+            txt_phukien = (TextView) itemView.findViewById(R.id.txt_phukien);
+            img_phukien = (ImageView) itemView.findViewById(R.id.img_thuonghieu);
             progressBar= (ProgressBar) itemView.findViewById(R.id.progress_bar_download);
         }
     }

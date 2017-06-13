@@ -46,19 +46,20 @@ public class SplashActivity extends AppIntro2 {
     @Override
     public void onSkipPressed(Fragment currentFragment) {
         super.onSkipPressed(currentFragment);
-        Thread thread=new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
-                    Thread.sleep(1000);
-                }catch (Exception e){
+        startActivity(new Intent(SplashActivity.this, HomeActivity.class));
 
-                }finally {
-                    startActivity(new Intent(SplashActivity.this, HomeActivity.class));
-                }
-            }
-        });
-        thread.start();
+//        Thread thread=new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try{
+//                    Thread.sleep(500);
+//                }catch (Exception e){
+//
+//                }finally {
+//                }
+//            }
+//        });
+//        thread.start();
     }
 
     @Override

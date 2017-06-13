@@ -1,14 +1,17 @@
 <resources>
     <string name="app_name">iTech</string>
-    <string name="app_logo">@drawable/logo</string>
+    <string name="app_logo">@drawable/logo2</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook_app_id">235130800308270</string>
     <string name="google_plus_client">693646077295-u4v5a12904pirtcj1afr1uum3lnebjeb.apps.googleusercontent.com</string>
 
-    <string name="localhost">http://192.168.56.1/Itech/</string>
-    <string name="localhost_api">http://192.168.56.1/Itech/api</string>
+    <string name="url_img_sanpham">http://192.168.56.1/Itech/UploadFiles/userfiles/images/products/</string>
+    <string name="localhost">http://192.168.1.102/Itech/</string>
+    <string name="localhost_api">http://192.168.1.102/Itech/api/</string>
+    <string name="localhost_api_mobile">http://192.168.1.102/Itech/api/</string>
+    <string name="localhost_api_virtual">http://192.168.56.1/Itech/api/</string>
 
     <string name="item_login">Đăng nhập</string>
     <string name="item_notify">Thông báo</string>

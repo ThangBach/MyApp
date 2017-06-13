@@ -1,5 +1,7 @@
 package com.example.bqt.myapp.Model.ObjectClass;
 
+import java.math.BigDecimal;
+
 /**
  * Created by BQT on 6/7/2017.
  */
@@ -19,7 +21,7 @@ public class Product {
     int Quanlity;
     int CategoryID;
     int BrandID;
-    String Price;
+    BigDecimal Price;
 
     public int getID() {
         return ID;
@@ -133,11 +135,11 @@ public class Product {
         BrandID = brandID;
     }
 
-    public String getPrice() {
+    public BigDecimal getPrice() {
         return Price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(BigDecimal price) {
         Price = price;
     }
 }

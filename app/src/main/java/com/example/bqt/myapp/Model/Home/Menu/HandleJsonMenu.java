@@ -1,7 +1,9 @@
 package com.example.bqt.myapp.Model.Home.Menu;
 
+import com.example.bqt.myapp.Model.Constaint;
 import com.example.bqt.myapp.Model.ObjectClass.ProductCategory;
 import com.example.bqt.myapp.Parse.JSONParser;
+import com.example.bqt.myapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,7 +43,7 @@ public class HandleJsonMenu {
     public  List<ProductCategory> ParseMenuChild(int parentID){
         List<ProductCategory> categories=new ArrayList<>();
         HandleJsonMenu handleJsonMenu=new HandleJsonMenu();
-        String url="http://192.168.56.1/itech/api/productcategory/getchild/"+parentID+"/0";
+        String url= Constaint.API_MOBILE+"productcategory/getchild/"+parentID+"/0";
         String dataJson="";
 
         JSONParser parser=new JSONParser(url);

@@ -100,8 +100,8 @@ public class HomeActivity extends AppCompatActivity implements OnBoomListener, I
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
                 getSupportFragmentManager(), FragmentPagerItems.with(this)
                 .add(R.string.fragment_khuyenmai, KhuyenMaiFragment.class)
-                .add(R.string.fragment_thoitrang, ThoiTrangFragment.class)
                 .add(R.string.fragment_dientu, DienTuFragment.class)
+                .add(R.string.fragment_thoitrang, ThoiTrangFragment.class)
                 .add(R.string.fragment_nhacua_doi_song, NhaCuaDoiSongFragment.class)
                 .add(R.string.fragment_mebe, MeBeFragment.class)
                 .add(R.string.fragment_lamdep, LamDepFragment.class)

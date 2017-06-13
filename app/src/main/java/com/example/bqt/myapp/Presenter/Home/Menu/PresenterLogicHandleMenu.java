@@ -1,8 +1,10 @@
 package com.example.bqt.myapp.Presenter.Home.Menu;
 
+import com.example.bqt.myapp.Model.Constaint;
 import com.example.bqt.myapp.Model.Home.Menu.HandleJsonMenu;
 import com.example.bqt.myapp.Model.ObjectClass.ProductCategory;
 import com.example.bqt.myapp.Parse.JSONParser;
+import com.example.bqt.myapp.R;
 import com.example.bqt.myapp.View.Home.View.IViewHandleMenu;
 
 import java.util.List;
@@ -22,7 +24,7 @@ public class PresenterLogicHandleMenu implements IPresenterHandleMenu {
 
     @Override
     public void getMenuList() {
-        String url="http://192.168.56.1/itech/api/productcategory/getparent";
+        String url= Constaint.API_MOBILE+"productcategory/getparent";
         String dataJson="";
         List<ProductCategory> categories;
 
