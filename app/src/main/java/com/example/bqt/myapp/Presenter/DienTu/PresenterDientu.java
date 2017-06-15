@@ -47,6 +47,7 @@ public class PresenterDientu implements IPresenterDientu {
         dienTu1.setTenDanhmuc("Thương hiệu điện thoại & Máy tính bảng");
         dienTu1.setTenSanpham("Top điện thoại & Máy tính bảng");
         dienTu1.setUrlImg(Constaint.URL_IMG_MOBILE + "UploadFiles/userfiles/images/promotion/dienthoai/"+discounts1.get(0).getDescription());
+        dienTu1.setCheckBrand(true);
         dienTus.add(dienTu1);
 
         DienTu dienTu2 = new DienTu();
@@ -61,6 +62,7 @@ public class PresenterDientu implements IPresenterDientu {
         dienTu2.setTenDanhmuc("Thương Máy tính & Laptop");
         dienTu2.setTenSanpham("Top Máy tính & Laptop");
         dienTu2.setUrlImg(Constaint.URL_IMG_MOBILE + "UploadFiles/userfiles/images/promotion/laptop/"+discount2.get(0).getDescription());
+        dienTu1.setCheckBrand(true);
         dienTus.add(dienTu2);
 
         DienTu dienTu3 = new DienTu();
@@ -74,6 +76,7 @@ public class PresenterDientu implements IPresenterDientu {
         dienTu3.setBrands(modelDienTu.getBrands(31));
         dienTu3.setTenDanhmuc("Thương hiệu Tivi");
         dienTu3.setTenSanpham("Top sẩn phẩm Tivi");
+        dienTu1.setCheckBrand(true);
         dienTu3.setUrlImg("http://192.168.1.102/Itech/UploadFiles/userfiles/images/promotion/tivi/"+discount3.get(0).getDescription());
         dienTus.add(dienTu3);
 

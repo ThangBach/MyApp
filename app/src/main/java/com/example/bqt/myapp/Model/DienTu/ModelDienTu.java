@@ -27,16 +27,16 @@ public class ModelDienTu {
 
     JSONParser parser;
 
-    public List<Brand> getBrands(){
-        List<Brand> brands=new ArrayList<>();
-        String urlApi= Constaint.API_MOBILE+"brand/getallbrands";
-        String jsonData="";
+    public List<Brand> getBrands() {
+        List<Brand> brands = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "brand/getallbrands";
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
             for (int i = 0; i < jsonArray.length(); i++) {
                 Brand brand = new Brand();
@@ -52,24 +52,24 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return brands;
     }
 
-    public List<Brand> getBrands(int categoryID){
-        List<Brand> brands=new ArrayList<>();
-        String urlApi= Constaint.API_MOBILE+"brand/getbrandcategory/"+categoryID;
-        String jsonData="";
+    public List<Brand> getBrands(int categoryID) {
+        List<Brand> brands = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "brand/getbrandcategory/" + categoryID;
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
             for (int i = 0; i < jsonArray.length(); i++) {
                 Brand brand = new Brand();
@@ -85,24 +85,24 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return brands;
     }
 
-    public  List<Brand> getBrandPhuKien(int parentID){
-        List<Brand> brands=new ArrayList<>();
-        String url=Constaint.API_MOBILE+"productcategory/getchild/"+parentID+"/0";
-        String dataJson="";
+    public List<Brand> getBrandPhuKien(int parentID) {
+        List<Brand> brands = new ArrayList<>();
+        String url = Constaint.API_MOBILE + "productcategory/getchild/" + parentID + "/0";
+        String dataJson = "";
 
-        parser=new JSONParser(url);
+        parser = new JSONParser(url);
         parser.execute();
 
         try {
-            dataJson=parser.get();
+            dataJson = parser.get();
             JSONArray jsonArray = new JSONArray(dataJson);
             for (int i = 0; i < jsonArray.length(); i++) {
                 Brand brand = new Brand();
@@ -118,24 +118,24 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        return  brands;
+        return brands;
     }
 
-    public  List<Brand> getPhoneTabletBrand(){
-        List<Brand> brands=new ArrayList<>();
-        String url=Constaint.API_MOBILE+"brand/getphonetabletbrand";
-        String dataJson="";
+    public List<Brand> getPhoneTabletBrand() {
+        List<Brand> brands = new ArrayList<>();
+        String url = Constaint.API_MOBILE + "brand/getphonetabletbrand";
+        String dataJson = "";
 
-        parser=new JSONParser(url);
+        parser = new JSONParser(url);
         parser.execute();
 
         try {
-            dataJson=parser.get();
+            dataJson = parser.get();
             JSONArray jsonArray = new JSONArray(dataJson);
             for (int i = 0; i < jsonArray.length(); i++) {
                 Brand brand = new Brand();
@@ -151,24 +151,24 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        return  brands;
+        return brands;
     }
 
-    public List<ProductPrice> getProductPrice(){
-        List<ProductPrice> productPrices=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"price/getpricemaxdate";
-        String jsonData="";
+    public List<ProductPrice> getProductPrice() {
+        List<ProductPrice> productPrices = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "price/getpricemaxdate";
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
             for (int i = 0; i < jsonArray.length(); i++) {
                 ProductPrice productPrice = new ProductPrice();
@@ -180,24 +180,24 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return productPrices;
     }
 
-    public List<ProductPrice> getPrices(int id){
-        List<ProductPrice> productPrices=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"price/getprice/"+id;
-        String jsonData="";
+    public List<ProductPrice> getPrices(int id) {
+        List<ProductPrice> productPrices = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "price/getprice/" + id;
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
             for (int i = 0; i < jsonArray.length(); i++) {
                 ProductPrice productPrice = new ProductPrice();
@@ -209,28 +209,28 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return productPrices;
     }
 
-    public List<Product> getProductTop(){
-        List<Product> products=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"product/getphonetablet";
-        String jsonData="";
+    public List<Product> getProductTop() {
+        List<Product> products = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "product/getphonetablet";
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
-                Product product=new Product();
+                Product product = new Product();
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 product.setID(Integer.parseInt(jsonObject.getString("ID")));
@@ -252,28 +252,28 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    public List<Product> getProductTopID(int categoryID){
-        List<Product> products=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"product/gettopproduct/"+categoryID;
-        String jsonData="";
+    public List<Product> getProductTopID(int categoryID) {
+        List<Product> products = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "product/gettopproduct/" + categoryID;
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
-                Product product=new Product();
+                Product product = new Product();
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 product.setID(Integer.parseInt(jsonObject.getString("ID")));
@@ -295,24 +295,24 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    public  List<ProductCategory> getCategory(int parentID){
-        List<ProductCategory> categories=new ArrayList<>();
-        String url=Constaint.API_MOBILE+"productcategory/getchild/"+parentID+"/0";
-        String dataJson="";
+    public List<ProductCategory> getCategory(int parentID) {
+        List<ProductCategory> categories = new ArrayList<>();
+        String url = Constaint.API_MOBILE + "productcategory/getchild/" + parentID + "/0";
+        String dataJson = "";
 
-        parser=new JSONParser(url);
+        parser = new JSONParser(url);
         parser.execute();
 
         try {
-            dataJson=parser.get();
+            dataJson = parser.get();
             JSONArray jsonArray = new JSONArray(dataJson);
             for (int i = 0; i < jsonArray.length(); i++) {
                 ProductCategory category = new ProductCategory();
@@ -333,24 +333,24 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        return  categories;
+        return categories;
     }
 
-    public Product getProductID(int productID){
-        Product product=new Product();
-        String urlApi=Constaint.API_MOBILE+"product/getbyid/"+productID;
-        String jsonData="";
+    public Product getProductID(int productID) {
+        Product product = new Product();
+        String urlApi = Constaint.API_MOBILE + "product/getbyid/" + productID;
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -373,30 +373,30 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return product;
     }
 
-    public List<Product> getTopPhuKien(){
-        List<Product> products=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"product/gettopphukien";
-        String jsonData="";
+    public List<Product> getTopPhuKien() {
+        List<Product> products = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "product/gettopphukien";
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Product product=new Product();
+                Product product = new Product();
 
                 product.setID(Integer.parseInt(jsonObject.getString("ID")));
                 product.setName(jsonObject.getString("Name"));
@@ -416,30 +416,30 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    public List<Product> getTopProductCategory(int categoryID){
-        List<Product> products=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"product/gettopproduct/"+categoryID;
-        String jsonData="";
+    public List<Product> getTopProductCategory(int categoryID) {
+        List<Product> products = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "product/gettopproduct/" + categoryID;
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Product product=new Product();
+                Product product = new Product();
 
                 product.setID(Integer.parseInt(jsonObject.getString("ID")));
                 product.setName(jsonObject.getString("Name"));
@@ -458,30 +458,30 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    public List<Product> getTopPhoneTablet(){
-        List<Product> products=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"product/getTopphonetablet";
-        String jsonData="";
+    public List<Product> getTopPhoneTablet() {
+        List<Product> products = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "product/getTopphonetablet";
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Product product=new Product();
+                Product product = new Product();
 
                 product.setID(Integer.parseInt(jsonObject.getString("ID")));
                 product.setName(jsonObject.getString("Name"));
@@ -501,30 +501,30 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    public List<Product> getProductCategory(int categoryID){
-        List<Product> products=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"product/getproduct/"+categoryID;
-        String jsonData="";
+    public List<Product> getProductCategory(int categoryID) {
+        List<Product> products = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "product/getproduct/" + categoryID;
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Product product=new Product();
+                Product product = new Product();
 
                 product.setID(Integer.parseInt(jsonObject.getString("ID")));
                 product.setName(jsonObject.getString("Name"));
@@ -543,30 +543,30 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    public List<Discount> getDiscountList(int categoryID){
-        List<Discount> discounts=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"discount/getdiscountcategory/"+categoryID;
-        String jsonData="";
+    public List<Discount> getDiscountList(int categoryID) {
+        List<Discount> discounts = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "discount/getdiscountcategory/" + categoryID;
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Discount discount=new Discount();
+                Discount discount = new Discount();
 
                 discount.setID(Integer.parseInt(jsonObject.getString("ID")));
                 discount.setName(jsonObject.getString("Name"));
@@ -579,30 +579,30 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return discounts;
     }
 
-    public List<Discount> getDiscountAll(){
-        List<Discount> discounts=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"discount/getdiscountall";
-        String jsonData="";
+    public List<Discount> getDiscountAll() {
+        List<Discount> discounts = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "discount/getdiscountall";
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Discount discount=new Discount();
+                Discount discount = new Discount();
 
                 discount.setID(Integer.parseInt(jsonObject.getString("ID")));
                 discount.setName(jsonObject.getString("Name"));
@@ -615,28 +615,28 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return discounts;
     }
 
-    public List<Product> getProductNews(){
-        List<Product> products=new ArrayList<>();
-        String urlApi=Constaint.API_MOBILE+"product/getproductnews";
-        String jsonData="";
+    public List<Product> getProductNews() {
+        List<Product> products = new ArrayList<>();
+        String urlApi = Constaint.API_MOBILE + "product/getproductnews";
+        String jsonData = "";
 
-        parser=new JSONParser(urlApi);
+        parser = new JSONParser(urlApi);
         parser.execute();
 
         try {
-            jsonData=parser.get();
+            jsonData = parser.get();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length(); i++) {
-                Product product=new Product();
+                Product product = new Product();
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 product.setID(Integer.parseInt(jsonObject.getString("ID")));
@@ -658,9 +658,9 @@ public class ModelDienTu {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (ExecutionException e){
+        } catch (ExecutionException e) {
             e.printStackTrace();
         }
         return products;

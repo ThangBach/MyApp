@@ -12,6 +12,7 @@ public class DienTu {
     String tenDanhmuc;
     String tenSanpham;
     String urlImg;
+    boolean checkBrand;
 
     public List<Brand> getBrands() {
         return brands;
@@ -51,5 +52,13 @@ public class DienTu {
 
     public void setTenSanpham(String tenSanpham) {
         this.tenSanpham = tenSanpham;
+    }
+
+    public boolean isCheckBrand() {
+        return checkBrand;
+    }
+
+    public void setCheckBrand(boolean checkBrand) {
+        this.checkBrand = checkBrand;
     }
 }

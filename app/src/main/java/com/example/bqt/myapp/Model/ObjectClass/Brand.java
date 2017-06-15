@@ -50,4 +50,5 @@ public class Brand {
     public void setStatus(String status) {
         Status = status;
     }
+
 }

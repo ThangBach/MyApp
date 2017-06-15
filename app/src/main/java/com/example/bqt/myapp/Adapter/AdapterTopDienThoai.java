@@ -28,15 +28,17 @@ public class AdapterTopDienThoai extends RecyclerView.Adapter<AdapterTopDienThoa
     List<Product> products;
     int layout;
 
-    public AdapterTopDienThoai(Context myContext, List<Product> products) {
+    public AdapterTopDienThoai(Context myContext, List<Product> products, int layout) {
         this.myContext = myContext;
         this.products = products;
+        this.layout = layout;
     }
 
     public class ViewHolderTopDienThoai extends RecyclerView.ViewHolder {
         ImageView imHinhSanPham;
-        TextView txtTenSP,txtGiaTien,txtGiamGia;
+        TextView txtTenSP, txtGiaTien, txtGiamGia;
         CardView cardView;
+
         public ViewHolderTopDienThoai(View itemView) {
             super(itemView);
             imHinhSanPham = (ImageView) itemView.findViewById(R.id.imTopDienThoaiDienTu);
@@ -50,7 +52,7 @@ public class AdapterTopDienThoai extends RecyclerView.Adapter<AdapterTopDienThoa
     @Override
     public ViewHolderTopDienThoai onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.custom_layout_topdienthoaivamaytinhbang,parent,false);
+        View view = layoutInflater.inflate(layout, parent, false);
 
         ViewHolderTopDienThoai viewHolderTopDienThoai = new ViewHolderTopDienThoai(view);
 
@@ -59,12 +61,12 @@ public class AdapterTopDienThoai extends RecyclerView.Adapter<AdapterTopDienThoa
 
     @Override
     public void onBindViewHolder(AdapterTopDienThoai.ViewHolderTopDienThoai holder, int position) {
-        Picasso.with(myContext).load(Constaint.URL_IMG_MOBILE+"UploadFiles/userfiles/images/products/"+products.get(position).getImage()).resize(140,140).centerInside().into(holder.imHinhSanPham);
+        Picasso.with(myContext).load(Constaint.URL_IMG_MOBILE + "UploadFiles/userfiles/images/products/" + products.get(position).getImage()).resize(140, 140).centerInside().into(holder.imHinhSanPham);
         holder.txtTenSP.setText(products.get(position).getName());
 
-        NumberFormat numberFormat=new DecimalFormat("###,###");
-        String gia=numberFormat.format(products.get(position).getPrice());
-        holder.txtGiaTien.setText(gia+" VND");
+        NumberFormat numberFormat = new DecimalFormat("###,###");
+        String gia = numberFormat.format(products.get(position).getPrice());
+        holder.txtGiaTien.setText(gia + " VND");
     }
 
     @Override

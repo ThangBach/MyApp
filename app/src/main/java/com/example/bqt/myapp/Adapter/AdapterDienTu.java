@@ -75,14 +75,14 @@ public class AdapterDienTu extends RecyclerView.Adapter<AdapterDienTu.ViewHolder
             }
         });
 
-        AdapterThuongHieu adapterThuongHieu=new AdapterThuongHieu(myContext,dienTu.getBrands());
+        AdapterThuongHieu adapterThuongHieu=new AdapterThuongHieu(myContext,dienTu.getBrands(),dienTu.isCheckBrand());
         RecyclerView.LayoutManager layoutManager=new GridLayoutManager(myContext,1,GridLayoutManager.HORIZONTAL,true);
 
         holder.recyclerViewBrands.setLayoutManager(layoutManager);
         holder.recyclerViewBrands.setAdapter(adapterThuongHieu);
         adapterThuongHieu.notifyDataSetChanged();
 
-        AdapterTopDienThoai adapterTopDienThoaiDienTu = new AdapterTopDienThoai(myContext,dienTu.getProducts());
+        AdapterTopDienThoai adapterTopDienThoaiDienTu = new AdapterTopDienThoai(myContext,dienTu.getProducts(),R.layout.custom_layout_topdienthoaivamaytinhbang);
         RecyclerView.LayoutManager layoutManagerTop = new LinearLayoutManager(myContext,LinearLayoutManager.HORIZONTAL,false);
 
         holder.recyclerViewProducts.setLayoutManager(layoutManagerTop);

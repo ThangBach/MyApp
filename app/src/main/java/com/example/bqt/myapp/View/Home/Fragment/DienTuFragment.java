@@ -121,7 +121,7 @@ public class DienTuFragment extends Fragment implements IViewDienTu {
 
     @Override
     public void showNewProductS(List<Product> products) {
-        AdapterTopDienThoai adapterTopDienThoai = new AdapterTopDienThoai(getContext(), products);
+        AdapterTopDienThoai adapterTopDienThoai = new AdapterTopDienThoai(getContext(), products,R.layout.custom_layout_topdienthoaivamaytinhbang);
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.HORIZONTAL, false);
 
